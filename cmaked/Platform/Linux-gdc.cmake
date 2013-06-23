@@ -12,20 +12,17 @@
 # See http://www.cmake.org/HTML/Copyright.html for details
 #
 
-IF(CMAKE_D_USE_TANGO)
-	SET(DSTDLIB_FLAGS "-fversion=Tango")
-ENDIF(CMAKE_D_USE_TANGO)
 IF(CMAKE_D_USE_PHOBOS)
-	SET(DSTDLIB_FLAGS "-fversion=Phobos")
+	SET(DSTDLIB_FLAGS "")
 ENDIF(CMAKE_D_USE_PHOBOS)
-IF(CMAKE_D_BUILD_DOCS)
-	SET(DDOC_FLAGS "-fdoc -fdoc-dir=documentation")
-	FOREACH(item ${CMAKE_D_DDOC_FILES})
-		SET(DDOC_FLAGS "${DDOC_FLAGS} -fdoc-inc=${item}")
-	ENDFOREACH(item)
-ENDIF(CMAKE_D_BUILD_DOCS)
+#IF(CMAKE_D_BUILD_DOCS)
+#	SET(DDOC_FLAGS "")
+#	FOREACH(item ${CMAKE_D_DDOC_FILES})
+#		SET(DDOC_FLAGS "${DDOC_FLAGS} -fdoc-inc=${item}")
+#	ENDFOREACH(item)
+#ENDIF(CMAKE_D_BUILD_DOCS)
 
-SET (CMAKE_D_FLAGS_INIT "-fversion=Posix -fversion=${CMAKE_BUILD_TYPE}Build ${DSTDLIB_FLAGS}")
+SET (CMAKE_D_FLAGS_INIT "${DSTDLIB_FLAGS}")
 SET (CMAKE_D_FLAGS_DEBUG_INIT "-g ${DDOC_FLAGS}")
 SET (CMAKE_D_FLAGS_MINSIZEREL_INIT "-Os ${DDOC_FLAGS}")
 SET (CMAKE_D_FLAGS_RELEASE_INIT "-O3 -fomit-frame-pointer -fweb -frelease -finline-functions ${DDOC_FLAGS}")

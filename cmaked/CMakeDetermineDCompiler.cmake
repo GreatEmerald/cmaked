@@ -97,10 +97,10 @@ ENDIF(NOT CMAKE_COMPILER_IS_GDC_RUN)
 # configure variables set in this file for fast reload later on
 IF(EXISTS ${CMAKE_SOURCE_DIR}/cmake/Modules/CMakeDCompiler.cmake.in)
 	CONFIGURE_FILE(${CMAKE_SOURCE_DIR}/cmake/Modules/CMakeDCompiler.cmake.in 
-               "${CMAKE_PLATFORM_ROOT_BIN}/CMakeDCompiler.cmake" IMMEDIATE)
+        "${CMAKE_PLATFORM_INFO_DIR}/CMakeDCompiler.cmake" IMMEDIATE)
 ELSE(EXISTS ${CMAKE_SOURCE_DIR}/cmake/Modules/CMakeDCompiler.cmake.in)
 	CONFIGURE_FILE(${CMAKE_ROOT}/Modules/CMakeDCompiler.cmake.in 
-               "${CMAKE_PLATFORM_ROOT_BIN}/CMakeDCompiler.cmake" IMMEDIATE)
+        "${CMAKE_PLATFORM_INFO_DIR}/CMakeDCompiler.cmake" IMMEDIATE)
 ENDIF(EXISTS ${CMAKE_SOURCE_DIR}/cmake/Modules/CMakeDCompiler.cmake.in)
 
 MARK_AS_ADVANCED(CMAKE_AR)
