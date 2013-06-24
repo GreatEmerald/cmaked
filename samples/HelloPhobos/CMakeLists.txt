@@ -1,7 +1,4 @@
 cmake_minimum_required(VERSION 2.8)
-#################################
-# Preamble
-##############
 
 # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ 
 # is checked

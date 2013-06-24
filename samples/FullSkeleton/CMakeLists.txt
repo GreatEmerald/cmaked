@@ -1,10 +1,8 @@
-#################################
-# Preamble
-##############
+cmake_minimum_required(VERSION 2.8)
 
 # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ 
 # is checked
-set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/Modules)
+set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/Modules ${CMAKE_SOURCE_DIR}/cmake/ProjectModules)
 
 # Using Phobos OR Tango (can be specified from cmake command line)
 if (NOT CMAKE_D_USE_PHOBOS AND NOT CMAKE_D_USE_TANGO)
