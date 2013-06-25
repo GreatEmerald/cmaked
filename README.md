@@ -1,9 +1,5 @@
-## CMake module for D Language
-Copyright (c) 2007:
--------------------
- * Selman Ulug <selman.ulug@gmail.com>
- * Tim Burrell <tim.burrell@gmail.com>
- 
+
+
       ____                        __              ____ 
      /\  _`\    /'\_/`\          /\ \            /\  _`\
      \ \ \/\_\ /\      \     __  \ \ \/'\      __\ \ \/\ \
@@ -14,6 +10,11 @@ Copyright (c) 2007:
       
 
   
+## CMake module for D Language
+Copyright (c) 2007:
+-------------------
+ * Selman Ulug <selman.ulug@gmail.com>
+ * Tim Burrell <tim.burrell@gmail.com>
 This is just a update of the project coming from dsource. 
 
 Features 
