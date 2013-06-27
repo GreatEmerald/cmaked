@@ -15,22 +15,38 @@ Copyright (c) 2007:
 -------------------
  * Selman Ulug <selman.ulug@gmail.com>
  * Tim Burrell <tim.burrell@gmail.com>
-This is just a update of the project coming from dsource. 
+
+Copyleft 2013
+* for the portage to dmd2 Marc Fuentes <marc.fuentes@inria.fr> 
+
 
 Features 
 --------
+ * Linux Platform only (DMD, GDC and LDC). 
  * no Tango support 
  * cmake version >=2.8
- * Linux Platform first (DMD, GDC and LDC). 
  * Windows will come later
 
 News
 ----
-  * currently, we sucessfuly build the HelloPhobos example 
-  with DMD and GDC on Linux... LDC support will gone quick
+  - currently, we sucessfuly build the HelloPhobos example with :
+    * gdc (GCC) 4.7.1
+    * DMD64 D Compiler v2.063.2
+    * LLVM D compiler (9facd2): based on DMD v2.063.1 and LLVM 3.2svn
+
+
+TODO
+----
+  - test CMakeD on a bigger example : like the [scid](https://github.com/aitzkora/scid.git)   
 
 ## Installation
- 
+
+ - To compile the Hello Phobos example :
+   * cd example/HelloPhobos/
+   * mkdir build && cd build
+   * env DC=ldmd2 cmake ..  replave ldmd2 by gdc or dmd to test
+   * make 
+
  - system install
    
    * cd cmaked/cmaked
@@ -39,14 +55,9 @@ News
    * cmake ..
    * make install (with sudo to install in the system path)
 
- - per project install 
-   * go to sample/project
-   * mkdir build
-   * cd build
-   * cmake ..
-   * make
-   If you are satisfied by the compilation of a Project and you want
-   distribute files with sources. Just copy the Modules directory into
-   your software directories.
-
+ - for a personal project
+   * make a cmake/Modules sub-directory into your project
+   * copy all files from cmaked/cmaked into that directory
+   * use CMakeLists from HelloPhobos to build your project
+   * enjoy 
 
