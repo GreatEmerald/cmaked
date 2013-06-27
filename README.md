@@ -21,7 +21,7 @@ Features
 --------
  * no Tango support 
  * cmake version >=2.8
- * Linux Platform first (DMD, GDC and LDC). 
+ * Linux Platform only (DMD, GDC and LDC). 
  * Windows will come later
   
 ## Installation
