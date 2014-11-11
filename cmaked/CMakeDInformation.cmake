@@ -112,7 +112,8 @@ INCLUDE(CMakeCommonLanguageInclude)
 
 #set(CMAKE_D_VERSION_FLAG "-fversion=")
 set(CMAKE_SHARED_LIBRARY_D_FLAGS "-fPIC")
-set(CMAKE_SHARED_LIBRARY_CREATE_D_FLAGS "-shared")
+set(CMAKE_D_COMPILE_OPTIONS_PIC "-fPIC")
+set(CMAKE_SHARED_LIBRARY_CREATE_D_FLAGS "-shared -defaultlib=libphobos2.so")
 set(CMAKE_INCLUDE_FLAG_D "-I")       # -I
 set(CMAKE_INCLUDE_FLAG_D_SEP "")     # , or empty
 
